@@ -34,3 +34,9 @@ fetch('events.json')
     });
   })
   .catch(error => console.error('Error loading school events:', error));
+function updateClock() {
+  const now = new Date();
+  document.getElementById('live-clock').textContent =
+    `Time: ${now.toLocaleTimeString('en-ZA')}`;
+}
+setInterval(updateClock, 1000);
