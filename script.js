@@ -40,3 +40,8 @@ function updateClock() {
     `Time: ${now.toLocaleTimeString('en-ZA')}`;
 }
 setInterval(updateClock, 1000);
+const todayISO = new Date().toISOString().split('T')[0];
+
+if (event.date === todayISO) {
+  li.classList.add('highlight-today');
+}
